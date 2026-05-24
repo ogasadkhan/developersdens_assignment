@@ -1,0 +1,43 @@
+(venv) PS C:\D\Project\DevelopersDens\developersdens_assignment> python outbound_agent.py dev 
+DEBUG:asyncio:Using proactor: IocpProactor
+2026-05-24 22:30:49,994 - DEBUG asyncio - Using proactor: IocpProactor 
+DEV:livekit.agents:Watching C:\D\Project\DevelopersDens\developersdens_assignment
+2026-05-24 22:30:49,999 - DEV  livekit.agents - Watching C:\D\Project\DevelopersDens\developersdens_assignment 
+DEBUG:asyncio:Using proactor: IocpProactor
+2026-05-24 22:30:54,957 - DEBUG asyncio - Using proactor: IocpProactor 
+INFO:livekit.agents:starting worker
+2026-05-24 22:30:54,974 - INFO livekit.agents - starting worker {"version": "1.2.2", "rtc-version": "1.0.12"}
+INFO:livekit.agents:registered worker
+2026-05-24 22:30:56,293 - INFO livekit.agents - registered worker {"id": "AW_pYtRRDzAJGQd", "url": "wss://asadleapsdev-7u4ql3u4.livekit.cloud", "region": "India West", "protocol": 17}
+INFO:livekit.agents:received job request
+2026-05-24 22:30:56,688 - INFO livekit.agents - received job request {"job_id": "AJ_Pv8oHXFdv4ux", "dispatch_id": "AD_pmPjtWSTrFgm", "room_name": "outbound-3c094961", "agent_name": "outbound-agent", "resuming": false}
+INFO:livekit.agents:initializing job runner
+2026-05-24 22:30:56,907 - INFO livekit.agents - initializing job runner {"tid": 13220}
+DEBUG:asyncio:Using proactor: IocpProactor
+2026-05-24 22:30:56,909 - DEBUG asyncio - Using proactor: IocpProactor 
+INFO:livekit.agents:job runner initialized
+2026-05-24 22:30:56,910 - INFO livekit.agents - job runner initialized {"tid": 13220, "elapsed_time": 0.0}
+INFO:outbound-agent:Connecting to room outbound-3c094961
+2026-05-24 22:30:56,916 - INFO outbound-agent - Connecting to room outbound-3c094961 
+WARNING:livekit.agents:Running <Task pending name='job_user_entrypoint' coro=<_JobProc._run_job_task.<locals>._traceable_entrypoint() running at C:\D\Project\DevelopersDens\venv\Lib\site-packages\opentelemetry\util\_decorator.py:61> wait_for=<Task pending name='Task-22' coro=<AgentSession.start() running at C:\D\Project\DevelopersDens\venv\Lib\site-packages\opentelemetry\util\_decorator.py:58> cb=[Task.task_wakeup()]> cb=[_JobProc._run_job_task.<locals>.<lambda>() at C:\D\Project\DevelopersDens\venv\Lib\site-packages\livekit\agents\ipc\job_proc_lazy_main.py:258, _JobProc._run_job_task.<locals>.log_exception() at C:\D\Project\DevelopersDens\venv\Lib\site-packages\livekit\agents\ipc\job_proc_lazy_main.py:260]> took too long: 4.87 seconds
+2026-05-24 22:31:11,001 - WARNING livekit.agents - Running <Task pending name='job_user_entrypoint' coro=<_JobProc._run_job_task.<locals>._traceable_entrypoint() running at C:\D\Project\DevelopersDens\venv\Lib\site-packages\opentelemetry\util\_decorator.py:61> wait_for=<Task pending name='Task-22' coro=<AgentSession.start() running at C:\D\Project\DevelopersDens\venv\Lib\site-packages\opentelemetry\util\_decorator.py:58> cb=[Task.task_wakeup()]> cb=[_JobProc._run_job_task.<locals>.<lambda>() at C:\D\Project\DevelopersDens\venv\Lib\site-packages\livekit\agents\ipc\job_proc_lazy_main.py:258, _JobProc._run_job_task.<locals>.log_exception() at C:\D\Project\DevelopersDens\venv\Lib\site-packages\livekit\agents\ipc\job_proc_lazy_main.py:260]> took too long: 4.87 seconds 
+DEBUG:livekit.agents:using audio io: `RoomIO` -> `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+2026-05-24 22:31:11,015 - DEBUG livekit.agents - using audio io: `RoomIO` -> `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO` 
+DEBUG:livekit.agents:using transcript io: `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+2026-05-24 22:31:11,015 - DEBUG livekit.agents - using transcript io: `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO` 
+INFO:outbound-agent:Agent session started, now dialing user...
+2026-05-24 22:31:11,018 - INFO outbound-agent - Agent session started, now dialing user... 
+INFO:outbound-agent:Creating SIP call: trunk_id=ST_yVogYUbXo8Fn, phone=+11234568789
+2026-05-24 22:31:11,020 - INFO outbound-agent - Creating SIP call: trunk_id=ST_yVogYUbXo8Fn, phone=+11234568789 
+DEBUG:livekit.agents:http_session(): creating a new httpclient ctx
+2026-05-24 22:31:11,021 - DEBUG livekit.agents - http_session(): creating a new httpclient ctx 
+INFO:livekit.agents:received job request
+2026-05-24 22:31:12,062 - INFO livekit.agents - received job request {"job_id": "AJ_3H8CJMdfDMCP", "dispatch_id": "AD_5U9WPZ9hWN9Z", "room_name": "outbound-39bc044f", "agent_name": "outbound-agent", "resuming": false}
+INFO:livekit.agents:initializing job runner
+2026-05-24 22:31:12,272 - INFO livekit.agents - initializing job runner {"tid": 9172}
+DEBUG:asyncio:Using proactor: IocpProactor
+2026-05-24 22:31:12,275 - DEBUG asyncio - Using proactor: IocpProactor 
+INFO:livekit.agents:job runner initialized
+2026-05-24 22:31:12,275 - INFO livekit.agents - job runner initialized {"tid": 9172, "elapsed_time": 0.0}
+INFO:outbound-agent:Connecting to room outbound-39bc044f
+2026-05-24 22:31:12,284 - INFO outbound-agent - Connecting to room outbound-39bc044f 

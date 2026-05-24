@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Outbound Call Dispatcher</title>
+    <style>
+      body { font-family: Arial, sans-serif; max-width:600px;margin:40px auto;}
+      label { display:block;margin-top:12px }
+      input, select { width:100%; padding:8px;margin-top:6px }
+      button { margin-top:12px;padding:10px 16px }
+      pre { background:#f5f5f5;padding:12px }
+    </style>
+  </head>
+  <body>
+    <h1>Outbound Call Dispatcher</h1>
+    <form id="callForm">
+      <label>Phone number
+        <input id="phone" placeholder="+1786..." required />
+      </label>
+      <label>Customer name
+        <input id="name" placeholder="Customer name" />
+      </label>
+      <label>Scenario
+        <select id="scenario">
+          <option value="appointment">Appointment reminder</option>
+          <option value="survey">Customer satisfaction survey</option>
+        </select>
+      </label>
+      <button type="submit">Call</button>
+    </form>
+
+    <h3>Response</h3>
+    <pre id="out">No calls yet</pre>
+
+    <script>
+      document.getElementById('callForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const phone = document.getElementById('phone').value;
+        const name = document.getElementById('name').value || 'Customer';
+        const scenario = document.getElementById('scenario').value;
+
+        const res = await fetch('/call', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ phone_number: phone, customer_name: name, scenario })
+        });
+        const data = await res.json();
+        document.getElementById('out').textContent = JSON.stringify(data, null, 2);
+      });
+    </script>
+  </body>
+</html>
